@@ -1,13 +1,13 @@
 # UTXO Management Project
 
-This guide provides explaining how to utilize them effectively for managing UTXOs (Unspent Transaction Outputs) in a Bitcoin-based application.
+This guide explains how to utilize them effectively for managing UTXOs (Unspent Transaction Outputs) in a Bitcoin-based application.
 
 ## Scripts Description
 
 
 ### `npm run split`
 
-- **Purpose**: Splits a larger UTXO into multiple 546 sats UTXOs. This is useful for transaction privacy and for creating denominations that are easier to split UTXO accurately.
+- **Purpose**: Splits a larger UTXO into multiple 546 sats UTXOs. This is useful for transaction privacy and creating denominations that are easier to split UTXO accurately.
 - **Usage**: Run `npm run split` to divide a large UTXO into small ones according to specified criteria.
 
 ### `npm run merge`
@@ -17,7 +17,7 @@ This guide provides explaining how to utilize them effectively for managing UTXO
 
 ### `npm run send`
 
-- **Purpose**: Facilitates the sending of Bitcoins from one address to another. This script likely handles the creation and broadcasting of the transaction to the Bitcoin network.
+- **Purpose**: Facilitates sending Bitcoins from one address to another. This script likely handles the creation and broadcasting of the transaction to the Bitcoin network.
 - **Usage**: Use `npm run send` to specify the details (e.g., recipient's address) and send the UTXO.
 
 ## Installation
@@ -213,7 +213,7 @@ console.log(`Estimated Transaction Fee: ${estimatedFee} satoshis`);
     - Add the selected UTXO as an input to the PSBT.
     - Define the transaction outputs:
         - One output sending the intended amount (UTXO value minus initial fee) to `sendToAddress`.
-        - Another output to send the remaining balance (initial fee minus calculated transaction fee) back to the wallet's address as a change.
+        - Another output is to send the remaining balance (initial fee minus calculated transaction fee) back to the wallet's address as a change.
 
 4. **Transaction Fee Calculation**
     - Calculate the transaction fee using the transaction’s virtual size and a predefined testnet fee rate.
@@ -234,7 +234,7 @@ console.log(`Estimated Transaction Fee: ${estimatedFee} satoshis`);
 #### Detailed Workflow
 
 1. **Create Wallet Instance**: 
-   - Instantiate a new wallet, which will autogenerate a new address and keypair.
+   - Instantiate a new wallet, which will autogenerate a new address and key pair.
 
 2. **Fetch UTXOs**:
    - Retrieve all available UTXOs for the wallet address that have a balance greater than a specified amount (10,000 satoshis in this script).
