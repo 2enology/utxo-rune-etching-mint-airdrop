@@ -156,7 +156,7 @@ sendTransaction();
 
 
 
-## Calculation Fee Function: `calculateTxFee`
+## Calculation Fee Function: `calculate TxFee`
 
 #### Purpose:
 
